@@ -1,3 +1,3 @@
-import { StrapiNextImageLoader } from ".";
+import { NextStrapiImageLoader } from ".";
 
-export default StrapiNextImageLoader.loader;
+export default NextStrapiImageLoader.loader;
