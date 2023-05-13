@@ -1,6 +1,14 @@
 {
   "name": "next-strapi-image-loader",
-  "version": "1.0.0",
+  "author": {
+    "email": "hello@necdet.xyz",
+    "name": "Necdet Efe",
+    "url": "https://github.com/quiloos39"
+  },
+  "repository": {
+    "url": "https://github.com/quiloos39/next-strapi-image-loader"
+  },
+  "version": "0.1.0",
   "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
