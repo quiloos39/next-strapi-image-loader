@@ -1,6 +1,6 @@
 ## next-strapi-image-loader
 
-It's a custom loader that helps you integrate your Strapi apps to Next.js
+It's a custom loader that helps you integrate your Strapi apps to Next.js. It does right thing and leaves image optimization to Strapi
 
 ## How to use it
 
