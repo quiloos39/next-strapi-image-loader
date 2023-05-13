@@ -18,7 +18,8 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "build": "tsc",
     "prepare": "husky install"
   }
