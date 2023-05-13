@@ -8,7 +8,7 @@
   "repository": {
     "url": "https://github.com/quiloos39/next-strapi-image-loader"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {

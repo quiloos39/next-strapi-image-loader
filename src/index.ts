@@ -16,7 +16,6 @@ export interface StrapiExtendedNextConfig extends NextConfig {
 export class NextStrapiImageLoader {
   static with(nextConfig: StrapiExtendedNextConfig) {
     let loaderPath = path.join(
-      "../../",
       "node_modules",
       "next-strapi-image-loader",
       "dist",
