@@ -1,6 +1,6 @@
 ## next-strapi-image-loader
 
-It's a custom loader that helps you integrate your Strapi apps to Next.js. It does right thing and leaves image optimization to Strapi
+This custom image loader seamlessly integrates Strapi apps with Next.js, handling image optimization through Strapi.
 
 ## Benefits
 
@@ -8,7 +8,7 @@ It's a custom loader that helps you integrate your Strapi apps to Next.js. It do
 2. No more wrapping every image source with `<Image src={getStrapiUrl(...)} />`, It does it for you.
 3. Works with any file provider for Strapi
 
-## How to use it
+## Usage
 
 ```js
 // next.config.js
@@ -19,13 +19,17 @@ const { NextStrapiImageLoader } = require("next-strapi-image-loader");
 const nextConfig = NextStrapiImageLoader.with({
   reactStrictMode: true,
   // Following options are default options
-  stripe: {
+  strapi: {
+    // Breakpoints from your Strapi app see https://docs.strapi.io/dev-docs/plugins/upload#upload-files
     breakpoints: {
       large: 1000,
       medium: 750,
       small: 500,
     },
+    // Public url of your Strapi App
     publicUrl: "http://localhost:1337",
+    // If you are hosting images locally or remotely this option is used to tell
+    // next-strapi-image-loader to ignore those files
     excludeOrigins: [],
     excludeFiles: [],
   },
