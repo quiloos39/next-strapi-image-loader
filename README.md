@@ -5,7 +5,7 @@ It's a custom loader that helps you integrate your Strapi apps to Next.js. It do
 ## Benefits
 
 1. Leaves image optimization to Strapi
-2. No more wrapping every image source with `<Image src={getStrapiUrl(...)} />` it does it for you.
+2. No more wrapping every image source with `<Image src={getStrapiUrl(...)} />`, It does it for you.
 3. Works with any file provider for Strapi
 
 ## How to use it
@@ -30,4 +30,6 @@ const nextConfig = NextStrapiImageLoader.with({
     excludeFiles: [],
   },
 });
+
+module.exports = nextConfig;
 ```
