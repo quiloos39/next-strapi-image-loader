@@ -13,20 +13,26 @@ export interface StrapiExtendedNextConfig extends NextConfig {
   strapi?: Partial<NextStrapiConfig>;
 }
 
-let config: NextStrapiConfig = {
-  breakpoints: {
-    large: 1000,
-    medium: 750,
-    small: 500,
-  },
-  publicUrl: "http://localhost:1337",
-  excludeOrigins: [],
-  excludeFiles: [],
-};
-
 export class NextStrapiImageLoader {
   static with(nextConfig: StrapiExtendedNextConfig) {
-    const loaderPath = path.join(__dirname, "loader.js");
+    let loaderPath = path.join(
+      "../../",
+      "node_modules",
+      "next-strapi-image-loader",
+      "dist",
+      "loader.js"
+    );
+
+    let config: NextStrapiConfig = {
+      breakpoints: {
+        large: 1000,
+        medium: 750,
+        small: 500,
+      },
+      publicUrl: "http://localhost:1337",
+      excludeOrigins: [],
+      excludeFiles: [],
+    };
 
     if (!!nextConfig.strapi?.breakpoints) {
       config.breakpoints = nextConfig.strapi.breakpoints;
@@ -56,6 +62,10 @@ export class NextStrapiImageLoader {
   }
 
   static loader: ImageLoader = ({ src, width }) => {
+    const {
+      strapi: config,
+    }: StrapiExtendedNextConfig = require("next.config.js");
+
     const breakPoint = Object.entries(config.breakpoints)
       .reverse()
       .find((breakPoint) => {
