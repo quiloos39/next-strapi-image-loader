@@ -20,7 +20,7 @@ const nextConfig = NextStrapiImageLoader.with({
   reactStrictMode: true,
   // Following options are default options
   strapi: {
-    // Breakpoints from your Strapi app see https://docs.strapi.io/dev-docs/plugins/upload#upload-files
+    // Breakpoints from your Strapi app see https://docs.strapi.io/dev-docs/plugins/upload#responsive-images
     breakpoints: {
       large: 1000,
       medium: 750,
