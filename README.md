@@ -8,9 +8,19 @@ This custom image loader seamlessly integrates Strapi apps with Next.js, handlin
 ✨ No more wrapping every image source with `<Image src={getStrapiUrl(...)} />`, It does it for you.  
 ✨ Works with any file provider for Strapi
 
-## Usage
+## Getting Started
 
-```javascript
+Install next-strapi-image-loader
+
+```bash
+yarn add next-strapi-image-loader
+# or
+npm install next-strapi-image-loader
+```
+
+Modify your `next.config.js`
+
+```js
 // next.config.js
 
 const { NextStrapiImageLoader } = require("next-strapi-image-loader");

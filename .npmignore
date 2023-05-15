@@ -3,4 +3,3 @@ __test__/
 .husky/
 src/
 jest.config.ts
-tsconfig.json
